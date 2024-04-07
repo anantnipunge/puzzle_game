@@ -112,15 +112,15 @@ class _DrawerPageState extends State<DrawerPage> {
                       ),
                     ),
                   ),
-                  GestureDetector(
-                    onTap: () {
-                      shoWSoon();
-                    },
-                    // child: ListTile(
-                    // leading: Icon(Icons.leaderboard,color: Colors.white,size: 24,),
-                    // title: Text("Leaderboard",style: TextStyle(color: Colors.white,fontSize: 18),),
-                    // ),
-                  ),
+                //   GestureDetector(
+                //     onTap: () {
+                //       shoWSoon();
+                //     },
+                //     // child: ListTile(
+                //     // leading: Icon(Icons.leaderboard,color: Colors.white,size: 24,),
+                //     // title: Text("Leaderboard",style: TextStyle(color: Colors.white,fontSize: 18),),
+                //     // ),
+                //   ),
                 ],
               ))),
     );

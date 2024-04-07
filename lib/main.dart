@@ -1,8 +1,6 @@
-// ignore_for_file: unnecessary_import
-
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:puzzle/pages/home.dart';
+import 'package:puzzle/pages/onboard.dart';
 import 'package:puzzle/utils/routes.dart';
 import 'package:puzzle/widgets/drawer.dart';
 import 'package:hive/hive.dart';
@@ -15,25 +13,9 @@ void main() async {
   runApp(const MyApp());
 }
 
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  @override
-  void initState() {
-    super.initState();
-
-    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-      systemNavigationBarColor: Color.fromRGBO(27, 18, 18, 1),
-      statusBarColor: Color.fromRGBO(27, 18, 18, 1),
-    ));
-  }
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -41,12 +23,13 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: "/",
+      initialRoute: "/splash",
       routes: {
         "/": (context) => HomePage(),
         Myroutes.drawerRoute: (context) => const DrawerPage(
               high: 0,
             ),
+        "/splash": (context) => const SplashScreen(),
       },
     );
   }
